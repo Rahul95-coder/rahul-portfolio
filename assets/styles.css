@@ -1,0 +1,43 @@
+/* Small complementary styles to Tailwind for this project */
+
+/* Provide dark mode variables — Tailwind's dark variant will pick up .dark on <html> */
+:root {
+  --surface: rgba(255,255,255,0.05);
+}
+html.dark {
+  --surface: rgba(255,255,255,0.02);
+}
+
+/* Slight card background fallback */
+.bg-white\/5 {
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Reveal helper classes (js toggles) */
+.opacity-0 { opacity: 0; }
+.opacity-100 { opacity: 1; }
+.translate-y-4 { transform: translateY(1rem); }
+.translate-y-0 { transform: translateY(0); }
+
+/* Hide mobile menu default */
+#mobile-menu.hidden { display: none; }
+
+/* Mobile nav link styling */
+.nav-link-mobile {
+  padding: 10px;
+  border-radius: 8px;
+  color: #e6eefc;
+  text-decoration: none;
+}
+.nav-link-mobile:hover { background: rgba(255,255,255,0.04); }
+
+/* Small responsive tweaks */
+@media (max-width: 768px) {
+  .nav-link { display: none; }
+}
+
+/* Accessibility focus */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid rgba(99,102,241,0.15);
+  outline-offset: 3px;
+}
